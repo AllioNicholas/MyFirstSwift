@@ -47,13 +47,13 @@
                         <constraints>
                             <constraint firstItem="buq-o5-YW0" firstAttribute="top" secondItem="TVl-4K-Rus" secondAttribute="bottom" constant="8" id="06B-E8-70i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bt7-Z7-cNQ" secondAttribute="bottom" constant="20" id="28D-HM-dVK"/>
-                            <constraint firstItem="Bt7-Z7-cNQ" firstAttribute="top" secondItem="TVl-4K-Rus" secondAttribute="bottom" constant="180" id="4Oj-vg-kGW"/>
                             <constraint firstItem="Bt7-Z7-cNQ" firstAttribute="centerX" secondItem="buq-o5-YW0" secondAttribute="centerX" id="7jZ-4d-gPu"/>
                             <constraint firstItem="TVl-4K-Rus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BHk-i6-LYd"/>
                             <constraint firstItem="buq-o5-YW0" firstAttribute="centerX" secondItem="TVl-4K-Rus" secondAttribute="centerX" id="ElU-hv-tOl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bt7-Z7-cNQ" secondAttribute="bottom" constant="20" id="Geq-da-vqb"/>
                             <constraint firstItem="Bt7-Z7-cNQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HBh-Oh-hwk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bt7-Z7-cNQ" secondAttribute="trailing" constant="255" id="IxP-PC-HDG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bt7-Z7-cNQ" secondAttribute="bottom" constant="20" id="Ouo-RJ-rf6"/>
                             <constraint firstItem="Bt7-Z7-cNQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R3F-9j-6PW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TVl-4K-Rus" secondAttribute="trailing" constant="220" id="RbM-6o-U6e"/>
                             <constraint firstItem="Bt7-Z7-cNQ" firstAttribute="top" secondItem="buq-o5-YW0" secondAttribute="bottom" constant="171" id="SXN-s5-l0d"/>
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1419" y="-370"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="ldC-XG-QDS">
             <objects>
-                <viewController id="NwP-pG-WAo" sceneMemberID="viewController">
+                <viewController id="NwP-pG-WAo" customClass="PlaySoundsViewController" customModule="MyFirstSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZSC-aQ-nLI"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ku-Iq-gEK"/>
@@ -111,7 +111,38 @@
                     <view key="view" contentMode="scaleToFill" id="TGh-NM-GU7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PME-44-Fkf">
+                                <rect key="frame" x="450" y="114" width="100" height="100"/>
+                                <state key="normal" image="Rabbit"/>
+                                <connections>
+                                    <action selector="playFast:" destination="NwP-pG-WAo" eventType="touchUpInside" id="PVT-f5-HVS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1N-Yw-HF7">
+                                <rect key="frame" x="275" y="530" width="50" height="50"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopSound:" destination="NwP-pG-WAo" eventType="touchUpInside" id="ovD-MX-SOc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24f-eX-QwS">
+                                <rect key="frame" x="50" y="114" width="100" height="100"/>
+                                <state key="normal" image="Snail"/>
+                                <connections>
+                                    <action selector="playSlow:" destination="NwP-pG-WAo" eventType="touchUpInside" id="LGg-Pp-1kA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="24f-eX-QwS" firstAttribute="top" secondItem="ZSC-aQ-nLI" secondAttribute="bottom" constant="50" id="2jL-PH-Whz"/>
+                            <constraint firstItem="8Ku-Iq-gEK" firstAttribute="top" secondItem="I1N-Yw-HF7" secondAttribute="bottom" constant="20" id="3lI-Sr-90w"/>
+                            <constraint firstItem="PME-44-Fkf" firstAttribute="top" secondItem="ZSC-aQ-nLI" secondAttribute="bottom" constant="50" id="7Ln-1Y-tOf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PME-44-Fkf" secondAttribute="trailing" constant="30" id="In9-97-iuA"/>
+                            <constraint firstItem="24f-eX-QwS" firstAttribute="leading" secondItem="TGh-NM-GU7" secondAttribute="leadingMargin" constant="30" id="b29-Xg-ZsP"/>
+                            <constraint firstItem="I1N-Yw-HF7" firstAttribute="centerX" secondItem="TGh-NM-GU7" secondAttribute="centerX" id="ydU-2W-zsG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8io-Qb-uFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,6 +170,8 @@
     </scenes>
     <resources>
         <image name="Microphone" width="100" height="100"/>
+        <image name="Rabbit" width="100" height="100"/>
+        <image name="Snail" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
     </resources>
 </document>

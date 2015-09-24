@@ -14,6 +14,8 @@
 		0106A6751BB08CDD008E4350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0106A6731BB08CDD008E4350 /* LaunchScreen.storyboard */; };
 		0106A6801BB08CDD008E4350 /* MyFirstSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106A67F1BB08CDD008E4350 /* MyFirstSwiftTests.swift */; };
 		0106A68B1BB08CDD008E4350 /* MyFirstSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106A68A1BB08CDD008E4350 /* MyFirstSwiftUITests.swift */; };
+		011B1AF61BB4854A0074826F /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B1AF51BB4854A0074826F /* PlaySoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		011B1AF81BB48AC00074826F /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 011B1AF71BB48AC00074826F /* movie_quote.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0106A6861BB08CDD008E4350 /* MyFirstSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0106A68A1BB08CDD008E4350 /* MyFirstSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstSwiftUITests.swift; sourceTree = "<group>"; };
 		0106A68C1BB08CDD008E4350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		011B1AF51BB4854A0074826F /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		011B1AF71BB48AC00074826F /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		0106A6691BB08CDD008E4350 /* MyFirstSwift */ = {
 			isa = PBXGroup;
 			children = (
+				011B1AF91BB48C8E0074826F /* Supporting Files */,
 				0106A66A1BB08CDD008E4350 /* AppDelegate.swift */,
 				0106A66C1BB08CDD008E4350 /* ViewController.swift */,
+				011B1AF51BB4854A0074826F /* PlaySoundsViewController.swift */,
 				0106A66E1BB08CDD008E4350 /* Main.storyboard */,
 				0106A6711BB08CDD008E4350 /* Assets.xcassets */,
 				0106A6731BB08CDD008E4350 /* LaunchScreen.storyboard */,
@@ -123,6 +129,14 @@
 				0106A68C1BB08CDD008E4350 /* Info.plist */,
 			);
 			path = MyFirstSwiftUITests;
+			sourceTree = "<group>";
+		};
+		011B1AF91BB48C8E0074826F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				011B1AF71BB48AC00074826F /* movie_quote.mp3 */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,7 @@
 			files = (
 				0106A6751BB08CDD008E4350 /* LaunchScreen.storyboard in Resources */,
 				0106A6721BB08CDD008E4350 /* Assets.xcassets in Resources */,
+				011B1AF81BB48AC00074826F /* movie_quote.mp3 in Resources */,
 				0106A6701BB08CDD008E4350 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0106A66D1BB08CDD008E4350 /* ViewController.swift in Sources */,
+				011B1AF61BB4854A0074826F /* PlaySoundsViewController.swift in Sources */,
 				0106A66B1BB08CDD008E4350 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +500,7 @@
 				0106A6911BB08CDD008E4350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0106A6921BB08CDD008E4350 /* Build configuration list for PBXNativeTarget "MyFirstSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				0106A6941BB08CDD008E4350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0106A6951BB08CDD008E4350 /* Build configuration list for PBXNativeTarget "MyFirstSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +518,7 @@
 				0106A6971BB08CDD008E4350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundViewController" customModule="MyFirstSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,7 +39,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dow-8A-RHA"/>
-                                    <segue destination="NwP-pG-WAo" kind="show" id="9lo-Qu-mh9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,6 +93,7 @@
                         <outlet property="recLabel" destination="buq-o5-YW0" id="gOu-KP-4pG"/>
                         <outlet property="recordButton" destination="TVl-4K-Rus" id="DB4-JA-eVv"/>
                         <outlet property="stopButton" destination="Bt7-Z7-cNQ" id="OQ4-HS-wg7"/>
+                        <segue destination="NwP-pG-WAo" kind="show" identifier="stopRecording" id="dYt-WH-rUT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

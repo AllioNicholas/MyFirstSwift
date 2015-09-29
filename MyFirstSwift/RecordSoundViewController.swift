@@ -11,7 +11,7 @@ import AVFoundation
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
-    @IBOutlet weak var recLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
 
@@ -25,6 +25,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordButton.enabled = true
+        infoLabel.text = "Tap to Record"
+        infoLabel.hidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
-        recLabel.hidden = false
+        infoLabel.text = "Recording..."
         stopButton.hidden = false
         recordButton.enabled = false
         
@@ -42,7 +44,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
         
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -56,7 +57,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecord(sender: UIButton) {
-        recLabel.hidden = true
+        infoLabel.hidden = true
         stopButton.hidden = true
         
         audioRecorder.stop()
@@ -66,9 +67,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if (flag) {
-            recordedAudio = RecordedAudio()
-            recordedAudio.filePathUrl = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(withTitle: recorder.url.lastPathComponent!, andFilePathURL: recorder.url)
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         }
     }

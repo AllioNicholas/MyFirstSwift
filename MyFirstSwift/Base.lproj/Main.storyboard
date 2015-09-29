@@ -25,12 +25,8 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buq-o5-YW0">
-                                <rect key="frame" x="263" y="358" width="74" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="rhD-3W-4cq"/>
-                                    <constraint firstAttribute="width" constant="74" id="ykB-Jv-PuN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                <rect key="frame" x="264" y="358" width="72" height="15"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="plG-oi-OS8"/>
                     <connections>
-                        <outlet property="recLabel" destination="buq-o5-YW0" id="gOu-KP-4pG"/>
+                        <outlet property="infoLabel" destination="buq-o5-YW0" id="Gb2-f0-2oB"/>
                         <outlet property="recordButton" destination="TVl-4K-Rus" id="DB4-JA-eVv"/>
                         <outlet property="stopButton" destination="Bt7-Z7-cNQ" id="OQ4-HS-wg7"/>
                         <segue destination="NwP-pG-WAo" kind="show" identifier="stopRecording" id="dYt-WH-rUT"/>
@@ -133,6 +129,20 @@
                                     <action selector="playSlow:" destination="NwP-pG-WAo" eventType="touchUpInside" id="LGg-Pp-1kA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0x-Vw-7r4">
+                                <rect key="frame" x="50" y="290" width="100" height="100"/>
+                                <state key="normal" image="Chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="NwP-pG-WAo" eventType="touchUpInside" id="y3l-Xt-9XP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-k4-H2D">
+                                <rect key="frame" x="450" y="290" width="100" height="100"/>
+                                <state key="normal" image="Darthvader"/>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="NwP-pG-WAo" eventType="touchUpInside" id="hYn-Sg-1tx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -140,7 +150,11 @@
                             <constraint firstItem="8Ku-Iq-gEK" firstAttribute="top" secondItem="I1N-Yw-HF7" secondAttribute="bottom" constant="20" id="3lI-Sr-90w"/>
                             <constraint firstItem="PME-44-Fkf" firstAttribute="top" secondItem="ZSC-aQ-nLI" secondAttribute="bottom" constant="50" id="7Ln-1Y-tOf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PME-44-Fkf" secondAttribute="trailing" constant="30" id="In9-97-iuA"/>
+                            <constraint firstItem="ol4-k4-H2D" firstAttribute="top" secondItem="PME-44-Fkf" secondAttribute="bottom" constant="76" id="NAv-N1-5B8"/>
                             <constraint firstItem="24f-eX-QwS" firstAttribute="leading" secondItem="TGh-NM-GU7" secondAttribute="leadingMargin" constant="30" id="b29-Xg-ZsP"/>
+                            <constraint firstItem="B0x-Vw-7r4" firstAttribute="leading" secondItem="TGh-NM-GU7" secondAttribute="leadingMargin" constant="30" id="bgO-Uv-Uen"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ol4-k4-H2D" secondAttribute="trailing" constant="30" id="ikk-Ix-bnr"/>
+                            <constraint firstItem="B0x-Vw-7r4" firstAttribute="top" secondItem="24f-eX-QwS" secondAttribute="bottom" constant="76" id="rY0-Jn-tKT"/>
                             <constraint firstItem="I1N-Yw-HF7" firstAttribute="centerX" secondItem="TGh-NM-GU7" secondAttribute="centerX" id="ydU-2W-zsG"/>
                         </constraints>
                     </view>
@@ -169,6 +183,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk" width="100" height="100"/>
+        <image name="Darthvader" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Rabbit" width="100" height="100"/>
         <image name="Snail" width="100" height="100"/>

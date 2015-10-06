@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w2a-Q8-Z7d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w2a-Q8-Z7d">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,6 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVl-4K-Rus">
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <animations/>
                                 <state key="normal" image="Microphone"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uu-Ex-XGQ"/>
@@ -26,18 +27,21 @@
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buq-o5-YW0">
                                 <rect key="frame" x="264" y="358" width="72" height="15"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt7-Z7-cNQ">
                                 <rect key="frame" x="275" y="530" width="50" height="50"/>
+                                <animations/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dow-8A-RHA"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="buq-o5-YW0" firstAttribute="top" secondItem="TVl-4K-Rus" secondAttribute="bottom" constant="8" id="06B-E8-70i"/>
@@ -110,6 +114,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PME-44-Fkf">
                                 <rect key="frame" x="450" y="114" width="100" height="100"/>
+                                <animations/>
                                 <state key="normal" image="Rabbit"/>
                                 <connections>
                                     <action selector="playFast:" destination="NwP-pG-WAo" eventType="touchUpInside" id="PVT-f5-HVS"/>
@@ -117,6 +122,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1N-Yw-HF7">
                                 <rect key="frame" x="275" y="530" width="50" height="50"/>
+                                <animations/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopSound:" destination="NwP-pG-WAo" eventType="touchUpInside" id="ovD-MX-SOc"/>
@@ -124,6 +130,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24f-eX-QwS">
                                 <rect key="frame" x="50" y="114" width="100" height="100"/>
+                                <animations/>
                                 <state key="normal" image="Snail"/>
                                 <connections>
                                     <action selector="playSlow:" destination="NwP-pG-WAo" eventType="touchUpInside" id="LGg-Pp-1kA"/>
@@ -131,6 +138,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0x-Vw-7r4">
                                 <rect key="frame" x="50" y="290" width="100" height="100"/>
+                                <animations/>
                                 <state key="normal" image="Chipmunk"/>
                                 <connections>
                                     <action selector="playChipmunkAudio:" destination="NwP-pG-WAo" eventType="touchUpInside" id="y3l-Xt-9XP"/>
@@ -138,12 +146,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-k4-H2D">
                                 <rect key="frame" x="450" y="290" width="100" height="100"/>
+                                <animations/>
                                 <state key="normal" image="Darthvader"/>
                                 <connections>
                                     <action selector="playDarthvaderAudio:" destination="NwP-pG-WAo" eventType="touchUpInside" id="hYn-Sg-1tx"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="24f-eX-QwS" firstAttribute="top" secondItem="ZSC-aQ-nLI" secondAttribute="bottom" constant="50" id="2jL-PH-Whz"/>
@@ -171,6 +181,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtq-gU-9WU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
